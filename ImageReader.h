@@ -3,6 +3,10 @@
 #include <string>
 #include "ImageQueue.h"
 
+// Tarea para leer imágenes y añadirlas a la cola de imágenes
+// - n_images: número de imágenes a leer
+// - prefix: prefijo del nombre de las imágenes a leer
+// - images_queue: Monitor tipo cola donde se van a añadir las imágenes leídas
 _Task ImageReader
 {
     int n_images;
@@ -14,7 +18,8 @@ public:
     ~ImageReader();
 
 private:
+    ImageContainer read_image(int i);
     void main();
 };
 
-#endif // IMAGE_READER_H
+#endif // IMAGE_READER_H|
